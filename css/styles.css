@@ -26,6 +26,7 @@ header {
   border-bottom: 1px solid #ececec;
   position: sticky;
   top: 0;
+  z-index: 1;
   background: var(--first-back-color);
 }
 
@@ -125,8 +126,8 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--part-text-color);
-  transition: width 0.1s ease-in-out;
-
+  /* transition: width 0.1s ease-in-out; */
+  /* transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1); */
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -306,6 +307,43 @@ address {
   margin-bottom: 50px;
 }
 
+.img-box {
+  position: relative;
+}
+
+.img-bar-first {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.img-bar-second {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.img-bar-thert {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.text-img-bar {
+  padding: 27px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--first-back-color);
+}
+
 .headline-point {
   font-weight: 700;
   font-size: 14px;
@@ -471,6 +509,7 @@ address {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  background: var(--first-back-color);
 }
 
 .list-project {
@@ -489,8 +528,35 @@ address {
   transition-duration: 1s;
 }
 
+.link-project {
+  position: relative;
+}
+
+.link-project:hover .project-bar {
+  opacity: 1;
+}
+
 .project-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.project-bar {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  top: 0;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition: 500ms;
+}
+
+.project-bar-text {
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--first-back-color);
 }
 /* -----------------BUTTON-PORTFOLIO------------------ */
 
@@ -533,6 +599,7 @@ address {
 
 .footer-area {
   display: flex;
+  align-items: baseline;
 }
 
 .contact-zone {
