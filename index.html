@@ -454,18 +454,41 @@
             <use href="./images/symbol-defs.svg#icon-close-black"></use>
           </svg>
         </button>
-        <h2 class="model-hidline">Оставьте свои данные, мы вам перезвоним</h2>
-        <ul class="modal-list">
-          <li>Имя</li>
-          <input type="text" />
-          <li>Телефон</li>
-          <input type="text" />
-          <li>Почта</li>
-          <input type="text" />
-          <li>Комментарий</li>
-          <input type="text" />
-        </ul>
-        <button type="button" class="modal-btn">Отправить</button>
+        <p class="modal-hidline">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <label class="modal-lable">
+            Имя
+            <input type="text" class="modal-input" name="user-name" required />
+          </label>
+          <label class="modal-lable">
+            Телефон
+            <input
+              type="tel"
+              class="modal-input"
+              name="user-telepfone"
+              required
+            />
+          </label>
+          <label class="modal-lable">
+            Почта
+            <input
+              type="email"
+              class="modal-input"
+              name="user-email"
+              required
+            />
+          </label>
+          <label for="user-text" class="modal-lable">
+            Комментарий
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-text"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <button type="submit" class="modal-btn">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
